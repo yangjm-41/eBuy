@@ -18,6 +18,7 @@
         <module>user</module>
         <module>zuul9001</module>
         <module>ebuyUI</module>
+        <module>order</module>
     </modules>
 
 
