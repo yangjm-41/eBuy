@@ -16,6 +16,7 @@
     <modules>
         <module>eureka3000</module>
         <module>user</module>
+        <module>zuul9001</module>
         <module>ebuyUI</module>
     </modules>
 
