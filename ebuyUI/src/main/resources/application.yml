@@ -14,4 +14,3 @@ eureka:
 spring:
   application:
     name: server-ui #此实例注册到eureka服务端的name
-# debug: true
