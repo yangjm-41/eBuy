@@ -19,6 +19,8 @@
         <module>zuul9001</module>
         <module>ebuyUI</module>
         <module>order</module>
+        <module>evaluation</module>
+        <module>management</module>
     </modules>
 
 

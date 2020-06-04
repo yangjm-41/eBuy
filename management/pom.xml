@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>eBuy</artifactId>
+        <groupId>com.ebuy</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>management</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.22</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ebuy</groupId>
+            <artifactId>user</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.netflix.hystrix/hystrix-core -->
+        <!-- 路断器的依赖需要单独引入，然后再启动类上加上注解@EnableHystrix表示启用 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-hystrix</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-core</artifactId>
+            <version>1.5.18</version>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-javanica</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
+
+        <!-- 使用 feign 不像ribbon ，这里需要引入依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR4</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

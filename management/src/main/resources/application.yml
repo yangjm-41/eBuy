@@ -1,0 +1,41 @@
+server:
+  port: 7003
+eureka:
+  client:
+    serviceUrl:
+        defaultZone: http://localhost:3000/eureka/  #eureka服务端提供的注册地址 参考服务端配置的这个路径
+  instance:
+    instance-id: management-0 #此实例注册到eureka服务端的唯一的实例ID
+    prefer-ip-address: true #是否显示IP地址
+    leaseRenewalIntervalInSeconds: 10 #eureka客户需要多长时间发送心跳给eureka服务器，表明它仍然活着,默认为30 秒 (与下面配置的单位都是秒)
+    leaseExpirationDurationInSeconds: 30 #Eureka服务器在接收到实例的最后一次发出的心跳后，需要等待多久才可以将此实例删除，默认为90秒
+
+
+spring:
+  application:
+    name: server-management #此实例注册到eureka服务端的name
+  datasource:
+    url: jdbc:mysql://106.52.155.112:3306/ebuy?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: eBuy@123.com
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initialSize: 5 # 初始化大小
+      minIdle: 5 # 最小
+      maxActive: 20 # 最大
+      maxWait: 60000 # 获取连接等待超时的时间
+      timeBetweenEvictionRunsMillis: 60000 # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      minEvictableIdleTimeMillis: 300000 # 配置一个连接在池中最小生存的时间，单位是毫秒
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true # 打开PSCache
+      maxPoolPreparedStatementPerConnectionSize: 20 # 指定每个连接上PSCache的大小
+      filters: stat,wall,log4j # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000 # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+debug: true
+
+feign:
+  hystrix:
+    enabled: true
