@@ -31,12 +31,11 @@ public class MessageService {
             new BasicThreadFactory.Builder().namingPattern("example-schedule-pool-%d").daemon(true).build());
 
 
-
     public void addReadNumber(String id) {
         updateexecutorService.execute(() -> {
             try {
 
-                this.wait(1000);
+                Thread.sleep(1000);
 
                 log.info("hello world");
             } catch (Exception e) {
