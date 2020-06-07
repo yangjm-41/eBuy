@@ -1,0 +1,9 @@
+FROM openjdk:8
+
+ENV LANG C.UTF-8
+
+ADD target/rocket-msg-server-1.0.0-SNAPSHOT.jar /server.jar
+
+EXPOSE 9955
+
+ENTRYPOINT ["java","-Duser.timezone=GMT+8","-jar", "server.jar"]

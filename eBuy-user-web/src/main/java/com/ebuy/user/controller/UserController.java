@@ -1,20 +1,35 @@
 package com.ebuy.user.controller;
 
-import com.ebuy.user.entity.User;
-import com.ebuy.user.service.UserService;
+
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.eBuy.pojo.TbUser;
+import com.ebuy.user.service.impl.UserService;
+import com.qy.base.comm.MyPage;
+import com.qy.base.controller.MyResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+//??? controller 加路径
+//@RestController("/admin")
+@RestController
+@RequestMapping("admin")
 
-@RestController("/users")
 public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping
-    public List<User> getUsers(){
-        return userService.getUsers();
+    @RequestMapping(value = "/userPage", method = {RequestMethod.GET, RequestMethod.POST})
+    public MyResult getUsers(MyPage page, TbUser tbUser) {
+        IPage page1 = userService.list(page, new QueryWrapper<TbUser>(tbUser));
+        return new MyResult(page1).ok();
     }
+
+    @RequestMapping("test")
+    public MyResult getUsers2(MyPage page, TbUser tbUser) {
+        return userService.useRpc();
+    }
+
 }

@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eBuy-dao" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eBuy-dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eBuy-evaluation" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eBuy-evaluation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eBuy-pojo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eBuy-pojo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eBuy-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eBuy-user-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eBuy-user-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eBuy-user-web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eBuy-user/eBuy-user-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eBuy-user/eBuy-user-interface/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eBuy-user/eBuy-user-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ebuy-base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ebuy-msg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ebuy-msg/ebuy-msg-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ebuy-msg/ebuy-msg-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ebuy-msg/ebuy-msg-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ebuyUI" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ebuyUI/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ebuyUI/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka3000" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka3000/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka3000/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/management" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/management/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul9001" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul9001/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul9001/src/main/resources" charset="UTF-8" />
   </component>

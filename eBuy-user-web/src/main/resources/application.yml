@@ -3,7 +3,7 @@ server:
 eureka:
   client:
     serviceUrl:
-        defaultZone: http://localhost:3000/eureka/  #eureka服务端提供的注册地址 参考服务端配置的这个路径
+      defaultZone: http://localhost:3000/eureka/  #eureka服务端提供的注册地址 参考服务端配置的这个路径
   instance:
     instance-id: user-0 #此实例注册到eureka服务端的唯一的实例ID
     prefer-ip-address: true #是否显示IP地址
@@ -18,7 +18,7 @@ spring:
     url: jdbc:mysql://106.52.155.112:3306/ebuy?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: eBuy@123.com
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     druid:
       initialSize: 5 # 初始化大小
       minIdle: 5 # 最小
@@ -34,4 +34,32 @@ spring:
       maxPoolPreparedStatementPerConnectionSize: 20 # 指定每个连接上PSCache的大小
       filters: stat,wall,log4j # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000 # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
-debug: true
+    hikari:
+      validation-timeout: 60000
+      idle-timeout: 60000
+      connection-timeout: 60000
+      max-lifetime: 60000
+      #filters: stat,wall
+      filter: # 单独配置 filter 能够执行批量sql
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 1000
+          merge-sql: true
+        wall:
+          config:
+            multi-statement-allow: true
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+
+logging:
+  level:
+    root:  ERROR
+    org.springframework:  ERROR
+    org.mybatis:  ERROR
+    com.ebuy.user:  DEBUG
+    com.ebuy.user.service.impl:  DEBUG
+    com.eBuy.mapper:  DEBUG
