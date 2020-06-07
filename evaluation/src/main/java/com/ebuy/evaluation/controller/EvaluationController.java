@@ -1,12 +1,12 @@
-package com.ebuy.evaluation.controller.iface.hys;
+package com.ebuy.evaluation.controller;
 
 import com.ebuy.evaluation.entity.Evaluation;
 import com.ebuy.evaluation.service.EvaluationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/evaluations")
@@ -40,6 +40,10 @@ public class EvaluationController {
 
     @DeleteMapping
     public int deleteEvaluations(List<Evaluation> entitys){
-        if (entitys.isEmpty())
+        if (entitys != null && entitys.isEmpty()){
+            List<String> ids = entitys.stream().map(Evaluation::getId).collect(Collectors.toList());
+            return evaluationService.deleteByIds(ids);
+        }
+        return 0;
     }
 }
