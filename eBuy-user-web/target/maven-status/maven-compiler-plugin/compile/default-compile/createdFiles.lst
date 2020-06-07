@@ -1,6 +1,0 @@
-com\ebuy\user\UserApplication.class
-com\ebuy\user\service\UserService.class
-com\ebuy\user\dao\UserDao.class
-com\ebuy\user\service\impl\UserServiceImpl.class
-com\ebuy\user\controller\UserController.class
-com\ebuy\user\entity\User.class

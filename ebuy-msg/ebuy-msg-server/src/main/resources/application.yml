@@ -1,0 +1,107 @@
+feign:
+  hystrix:
+    enabled: true
+
+logging:
+  level:
+    root:  error
+    org.springframework:  error
+    com.qy.msg: info
+server:
+  port: 9002
+spring:
+  messages:
+    basename: static/i18n/messages
+  application:
+    name: rocket-msg
+  redis:
+    port: 30014
+    password: fsdFIG&fdsfbhJbZhgi!y21A
+    host: redis.qcss.xyz
+    timeout: 20000
+    database: 0
+    jedis:
+      pool:
+        # 最大空闲连接
+        max-idle: 8
+        # 最小空闲链接
+        min-idle: 0
+        # 最大连接数（负数表示没有限制）
+        max-active: 8
+        # 最大阻塞等待时间（负数表示没有限制）
+        max-wait: 0
+  datasource:
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master 可以配置多数据源
+      datasource:
+        master:
+          username:
+          password:
+          driver-class-name: com.mysql.jdbc.Driver
+          url:
+        comm:
+          username:
+          password:
+          driver-class-name: com.mysql.jdbc.Driver
+          url:
+      druid:
+        max-wait: 60000
+        time-between-eviction-runs-millis: 60000
+        min-evictable-idle-time-millis: 0
+
+      hikari:
+        idle-timeout: 60000
+        connection-timeout: 60000
+        validation-timeout: 3000
+        max-lifetime: 60000
+    druid:
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      #验证连接是否有效。此参数必须设置为非空字符串，下面三项设置成true才能生效
+      validationQuery: SELECT 1
+      #指明连接是否被空闲连接回收器(如果有)进行检验.如果检测失败,则连接将被从池中去除.
+      testWhileIdle: true
+      #指明是否在归还到池中前进行检验
+      test-on-return: false
+      max-active: 1000
+      min-idle: 10
+      initialSize: 5
+    validationQuery: SELECT 1
+    testWhileIdle: true
+    testOnBorrow: true
+    testOnReturn: false
+
+
+mybatis:
+  mapper-locations:
+    - classpath*:/mappings/**/*.xml
+    - classpath*:/**/dao/**/*.xml
+  type-aliases-package: com.qy
+
+eureka:
+  instance:
+    #eureka客户端需要多长时间发送心跳给eureka服务器，表明他仍然或者，默认30秒
+    lease-renewal-interval-in-seconds: 5
+    #eureka服务器在接受到实力的最后一次发出的心跳后，需要等待多久才可以将此实力删除
+    lease-expiration-duration-in-seconds: 10000
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:3000/eureka/
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+rocket:
+  edebug: true
+  web: true
+  # 即时通讯服务
+  im:
+    enableMultipleConfig: true
+    configs:
+      config[0]:
+        platform:
+        active:
+        wangyi:
+          appKey:
+          appSecret:

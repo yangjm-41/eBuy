@@ -1,7 +1,6 @@
 package com.order.controller;
 
 import com.ebuy.user.entity.User;
-import com.ebuy.user.service.UserService;
 import com.order.controller.iface.UserController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

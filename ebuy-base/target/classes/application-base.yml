@@ -1,0 +1,4 @@
+spring:
+  messages:
+    basename: static/i18n/messages
+
