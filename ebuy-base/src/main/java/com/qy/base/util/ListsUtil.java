@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: list工具类
  * @Date: Create in 17:28 2019/11/14
  */

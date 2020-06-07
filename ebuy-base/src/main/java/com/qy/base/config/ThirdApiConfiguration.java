@@ -13,7 +13,7 @@ import java.util.List;
 import static com.qy.base.util.CheckUtil.check;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: 第三方api配置环境
  * @Date: Create in 3:02 PM 2019/12/9
  */

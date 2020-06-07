@@ -3,7 +3,7 @@ package com.qy.base.gener;
 import lombok.Data;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: 表字段信息
  * @Date: Create in 16:27 2019/4/25
  */

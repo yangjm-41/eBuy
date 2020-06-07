@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * @Author: ZhengYupeng
+
  * @Describe: app接口国际化工具
  */
 @Slf4j

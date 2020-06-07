@@ -6,33 +6,42 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="user" />
-        <module name="management" />
-        <module name="eBuy-user-interface" />
-        <module name="order" />
+        <module name="ebuy-base" />
         <module name="eBuy-dao" />
-        <module name="eBuy-user-Web" />
-        <module name="eBuy-user-service" />
-        <module name="zuul9001" />
-        <module name="eureka3000" />
         <module name="eBuy-evaluation" />
-        <module name="ebuyUI" />
+        <module name="eBuy-msg-client" />
+        <module name="ebuy-msg-common" />
+        <module name="ebuy-msg-server" />
         <module name="eBuy-pojo" />
+        <module name="eBuy-user-interface" />
+        <module name="eBuy-user-service" />
+        <module name="eBuy-user-Web" />
+        <module name="ebuyUI" />
+        <module name="eureka3000" />
+        <module name="management" />
+        <module name="order" />
+        <module name="user" />
+        <module name="zuul9001" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="eBuy-user-service" target="1.8" />
+      <module name="evaluation" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eBuy-dao" options="-parameters" />
       <module name="eBuy-evaluation" options="-parameters" />
+      <module name="eBuy-msg-client" options="-parameters" />
       <module name="eBuy-pojo" options="-parameters" />
       <module name="eBuy-user" options="" />
       <module name="eBuy-user-Web" options="-parameters" />
       <module name="eBuy-user-interface" options="-parameters" />
       <module name="eBuy-user-service" options="-parameters" />
+      <module name="ebuy-base" options="-parameters" />
+      <module name="ebuy-msg-common" options="-parameters" />
+      <module name="ebuy-msg-server" options="-parameters" />
       <module name="ebuyUI" options="-parameters" />
       <module name="eureka3000" options="-parameters" />
       <module name="management" options="-parameters" />

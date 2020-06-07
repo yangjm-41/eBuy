@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: 状态和文本映射
  * @Date: Create in 19:21 2019/4/24
  */

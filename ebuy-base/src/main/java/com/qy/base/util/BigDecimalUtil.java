@@ -7,7 +7,7 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: 金额比较器
  * @Date: Create in 16:25 2019/4/24
  */

@@ -4,7 +4,7 @@ package com.qy.base.config;
 import com.qy.base.exception.ParamException;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: 第三方api工具类
  * @Date: Create in 16:09 2019/9/5
  */

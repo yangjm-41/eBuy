@@ -12,7 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: 字符串处理类
  * @Date: Create in 17:15 2019/5/17
  */

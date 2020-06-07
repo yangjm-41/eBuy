@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: 字段属性，添加在字段上
  * <p>
  * String   -> varcahr  类型

@@ -5,7 +5,7 @@ import com.qy.base.comm.ResponseCode;
 import lombok.Data;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: 参数校验异常
  * @Date: Create in 上午11:26 2018/11/18
  */

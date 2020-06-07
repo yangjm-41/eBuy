@@ -4,7 +4,7 @@ import com.qy.base.exception.ParamException;
 import com.qy.base.util.CommonRedisKey;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: 通用常量配置
  * @Date: Create in 16:20 2019/9/24
  */

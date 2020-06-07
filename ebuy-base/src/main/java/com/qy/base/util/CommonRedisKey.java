@@ -3,7 +3,7 @@ package com.qy.base.util;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: 通用redisKey
  * @Date: Create in 11:26 2019/10/8
  */

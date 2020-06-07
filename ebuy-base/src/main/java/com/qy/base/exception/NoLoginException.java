@@ -1,7 +1,7 @@
 package com.qy.base.exception;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: 用户未登录校验异常
  * @Date: Create in 上午11:26 2018/11/18
  */

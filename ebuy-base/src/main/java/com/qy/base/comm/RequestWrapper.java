@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequestWrapper;
 import java.io.*;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: 包装HttpServletRequest，目的是让其输入流可重复读
  * @Date: Create in 13:54 2019/11/15
  */

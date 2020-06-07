@@ -15,7 +15,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
- * @Author: Lautumn
+ * @Author: ebuy
  * @Describe: map工具类
  * @Date: Create in 17:28 2019/11/14
  */
