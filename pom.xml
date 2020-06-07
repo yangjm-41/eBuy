@@ -24,14 +24,11 @@
         <module>eBuy-pojo</module>
         <module>eBuy-user-web</module>
         <module>eBuy-user</module>
+        <module>eBuy-dao</module>
     </modules>
 
     <dependencies>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.1.2</version>
-        </dependency>
+
     </dependencies>
 
 
