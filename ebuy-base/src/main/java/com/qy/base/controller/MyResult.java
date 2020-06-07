@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.qy.base.comm.ResponseCode;
-import io.swagger.annotations.ApiModel;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
@@ -16,8 +15,7 @@ import java.util.List;
  * @param <T>
  */
 @Slf4j
-@ApiModel(value = "返回对象", description = "返回对象")
-@Data
+ @Data
 public class MyResult<T> implements Serializable {
 
     /**

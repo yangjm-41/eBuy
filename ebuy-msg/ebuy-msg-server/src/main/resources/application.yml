@@ -2,18 +2,13 @@ feign:
   hystrix:
     enabled: true
 
-logging:
-  level:
-    root:  error
-    org.springframework:  error
-    com.qy.msg: info
 server:
   port: 9002
 spring:
   messages:
     basename: static/i18n/messages
   application:
-    name: rocket-msg
+    name: ebuy-msg
   redis:
     port: 30014
     password: fsdFIG&fdsfbhJbZhgi!y21A
@@ -31,45 +26,46 @@ spring:
         # 最大阻塞等待时间（负数表示没有限制）
         max-wait: 0
   datasource:
-    dynamic:
-      primary: master #设置默认的数据源或者数据源组,默认值即为master 可以配置多数据源
-      datasource:
-        master:
-          username:
-          password:
-          driver-class-name: com.mysql.jdbc.Driver
-          url:
-        comm:
-          username:
-          password:
-          driver-class-name: com.mysql.jdbc.Driver
-          url:
-      druid:
-        max-wait: 60000
-        time-between-eviction-runs-millis: 60000
-        min-evictable-idle-time-millis: 0
-
-      hikari:
-        idle-timeout: 60000
-        connection-timeout: 60000
-        validation-timeout: 3000
-        max-lifetime: 60000
+    url: jdbc:mysql://106.52.155.112:3306/ebuy?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: eBuy@123.com
+    driver-class-name: com.mysql.jdbc.Driver
     druid:
-      timeBetweenEvictionRunsMillis: 60000
-      minEvictableIdleTimeMillis: 300000
-      #验证连接是否有效。此参数必须设置为非空字符串，下面三项设置成true才能生效
-      validationQuery: SELECT 1
-      #指明连接是否被空闲连接回收器(如果有)进行检验.如果检测失败,则连接将被从池中去除.
+      initialSize: 5 # 初始化大小
+      minIdle: 5 # 最小
+      maxActive: 20 # 最大
+      maxWait: 60000 # 获取连接等待超时的时间
+      timeBetweenEvictionRunsMillis: 60000 # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      minEvictableIdleTimeMillis: 300000 # 配置一个连接在池中最小生存的时间，单位是毫秒
+      validationQuery: SELECT 1 FROM DUAL
       testWhileIdle: true
-      #指明是否在归还到池中前进行检验
-      test-on-return: false
-      max-active: 1000
-      min-idle: 10
-      initialSize: 5
-    validationQuery: SELECT 1
-    testWhileIdle: true
-    testOnBorrow: true
-    testOnReturn: false
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true # 打开PSCache
+      maxPoolPreparedStatementPerConnectionSize: 20 # 指定每个连接上PSCache的大小
+      filters: stat,wall,log4j # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000 # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+    hikari:
+      validation-timeout: 60000
+      idle-timeout: 60000
+      connection-timeout: 60000
+      max-lifetime: 60000
+      #filters: stat,wall
+      filter: # 单独配置 filter 能够执行批量sql
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 1000
+          merge-sql: true
+        wall:
+          config:
+            multi-statement-allow: true
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+
 
 
 mybatis:

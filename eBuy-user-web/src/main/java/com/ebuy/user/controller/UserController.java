@@ -24,10 +24,10 @@ public class UserController {
         IPage page1 = userService.list(page, new QueryWrapper<TbUser>(tbUser));
         return new MyResult(page1).ok();
     }
-    //
-    //@RequestMapping("test")
-    //public MyResult getUsers2(MyPage page, TbUser tbUser) {
-    //    //return userService.useRpc();
-    //}
+
+    @RequestMapping("test")
+    public MyResult getUsers2(MyPage page, TbUser tbUser) {
+        return userService.useRpc();
+    }
 
 }

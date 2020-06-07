@@ -1,6 +1,6 @@
 package com.qy.msg.server.service;
 
-import com.qy.msg.common.enumeration.MessageEnum;
+
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import org.springframework.beans.factory.annotation.Autowired;
