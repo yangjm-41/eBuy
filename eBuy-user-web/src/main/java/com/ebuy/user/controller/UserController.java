@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-//??? controller 加路径
-//@RestController("/admin")
 @RestController
 @RequestMapping("admin")
 
@@ -26,10 +24,10 @@ public class UserController {
         IPage page1 = userService.list(page, new QueryWrapper<TbUser>(tbUser));
         return new MyResult(page1).ok();
     }
-
-    @RequestMapping("test")
-    public MyResult getUsers2(MyPage page, TbUser tbUser) {
-        return userService.useRpc();
-    }
+    //
+    //@RequestMapping("test")
+    //public MyResult getUsers2(MyPage page, TbUser tbUser) {
+    //    //return userService.useRpc();
+    //}
 
 }

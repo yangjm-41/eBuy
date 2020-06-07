@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.qy</groupId>
+        <groupId>com.ebuy</groupId>
         <artifactId>ebuy-msg</artifactId>
         <version>1.0.0</version>
     </parent>
@@ -54,7 +54,7 @@
 
 
         <dependency>
-            <groupId>com.qy</groupId>
+            <groupId>com.ebuy</groupId>
             <artifactId>ebuy-base</artifactId>
         </dependency>
         <dependency>
@@ -76,35 +76,6 @@
 
     </dependencies>
 
-
-    <!--环境配置-->
-    <profiles>
-        <profile>
-            <id>local</id>
-            <properties>
-                <!-- 环境标识，需要与配置文件的名称相对应 -->
-                <activatedProperties>local</activatedProperties>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>dev</id>
-            <properties>
-                <activatedProperties>dev</activatedProperties>
-            </properties>
-            <activation>
-                <!-- 默认环境 -->
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-
-        <profile>
-            <id>pro</id>
-            <properties>
-                <activatedProperties>pro</activatedProperties>
-            </properties>
-        </profile>
-    </profiles>
 
     <build>
         <plugins>

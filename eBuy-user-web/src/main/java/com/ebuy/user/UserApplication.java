@@ -28,7 +28,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
         })
 @EnableTransactionManagement
 @EnableScheduling
-@EnableFeignClients
+@EnableFeignClients(
+        {"com.qy.msg.client"
+        })
 @EnableAsync
 public class UserApplication {
     public static void main(String[] args) {
