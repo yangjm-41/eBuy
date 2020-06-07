@@ -19,7 +19,7 @@
         <module>zuul9001</module>
         <module>ebuyUI</module>
         <module>order</module>
-        <module>evaluation</module>
+        <module>eBuy-evaluation</module>
         <module>management</module>
         <module>eBuy-pojo</module>
         <module>eBuy-user-web</module>
