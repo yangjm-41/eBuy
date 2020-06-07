@@ -1,10 +1,21 @@
 package com.ebuy.evaluation.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
+@TableName(value = "tb_evaluation")//指定表名
 public class Evaluation {
+    @TableId(value = "id",type = IdType.UUID)//指定自增策略
     private String id;
+    @TableField(value = "user_id",exist = true)
     private String user_id;
+    @TableField(value = "merchant_id",exist = true)
     private String merchant_id;
+    @TableField(value = "content",exist = true)
     private String content;
+    @TableField(value = "level",exist = true)
     private Integer level;
 
     public String getId() {
